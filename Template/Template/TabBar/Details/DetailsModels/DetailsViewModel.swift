@@ -1,8 +1,8 @@
 import Foundation
 import Combine
 
-class SearchViewModel: ObservableObject {
-    @Published var title: String = "Research"
+class DetailsViewModel: ObservableObject {
+    @Published var title: String = "Details"
     
     init() {
         // Initialisation du ViewModel

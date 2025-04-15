@@ -1,8 +1,8 @@
 import SwiftUI
 import DesignSystemKit
 
-struct SearchView: View {
-    @StateObject private var viewModel = SearchViewModel()
+struct DetailsView: View {
+    @StateObject private var viewModel = DetailsViewModel()
     
     var body: some View {
         BaseView(title: viewModel.title) {

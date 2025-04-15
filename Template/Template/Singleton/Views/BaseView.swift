@@ -9,6 +9,8 @@ struct BaseView<Content: View>: View {
     let title: String
     let content: Content
     private let colors = DSColors()
+    let typography = DSTypography()
+  
     
     init(title: String, @ViewBuilder content: () -> Content) {
         self.title = title
@@ -18,9 +20,10 @@ struct BaseView<Content: View>: View {
     var body: some View {
         VStack {
             Text(title)
-                .font(.title)
+                .font(typography.headlineMedium)
                 .foregroundColor(colors.textPrimary)
                 .padding()
+                .bold()
             content
             Spacer()
         }
